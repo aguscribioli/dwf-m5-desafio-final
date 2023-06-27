@@ -15,9 +15,9 @@ export function initPlayPage(params) {
 
     div.innerHTML = `
         <div class="container-jugadas-computer">
-            <my-jugada jugada="tijera"></my-jugada>
-            <my-jugada jugada="papel"></my-jugada>
-            <my-jugada jugada="piedra"></my-jugada>
+            <my-jugada jugada="tijera" class="computer-play-tijera"></my-jugada>
+            <my-jugada jugada="papel" class="computer-play-papel"></my-jugada>
+            <my-jugada jugada="piedra" class="computer-play-piedra"></my-jugada>
         </div>
         <my-timer class="container-timer"></my-timer>
         <div class="container-jugadas-player">
@@ -59,7 +59,7 @@ export function initPlayPage(params) {
             display: none;
         }
         .enable {
-            display: block;
+            display: flex;
         }
     `;
 
@@ -81,29 +81,77 @@ export function initPlayPage(params) {
         state.subscribe(() => {});
     }
 
-    const elegirPiedra = div.querySelector(".player-play-piedra");
-    const elegirPapel = div.querySelector(".player-play-papel");
-    const elegirTijera = div.querySelector(".player-play-tijera");
+    function redirectToResult(){
+        let counter = 1;
+        setInterval(() => {
+            counter--;
+            if (counter == 0) {
+                params.goTo("/welcome");
+                clearInterval();
+            }
+        }, 3000)
+    };
+
+    const playerPlayPiedra = div.querySelector(".player-play-piedra");
+    const playerPlayPapel = div.querySelector(".player-play-papel");
+    const playerPlayTijera = div.querySelector(".player-play-tijera");
+    const containerJugadasComputer = div.querySelector(".container-jugadas-computer");
+    const computerPlayPiedra = div.querySelector(".computer-play-piedra");
+    const computerPlayPapel = div.querySelector(".computer-play-papel");
+    const computerPlayTijera = div.querySelector(".computer-play-tijera");
     const timer = div.querySelector(".container-timer");
 
+    function showComputerPlay(){
+        containerJugadasComputer.classList.add("enable");
+        if (computerMove == "piedra") {
+            computerPlayPiedra.classList.add("enable");
+            computerPlayPapel.classList.add("disable");
+            computerPlayTijera.classList.add("disable");
+        } else if (computerMove == "papel") {
+            computerPlayPapel.classList.add("enable");
+            computerPlayPiedra.classList.add("disable");
+            computerPlayTijera.classList.add("disable");
+        } else {
+            computerPlayTijera.classList.add("enable");
+            computerPlayPiedra.classList.add("disable");
+            computerPlayPapel.classList.add("disable");
+        }
+        timer.classList.add("disable");
+    }
+    
     (function myPlay(){
-        elegirPiedra.addEventListener("click", () => {
+        playerPlayPiedra.addEventListener("click", () => {
             activeEventOn();
             playerMove = "piedra";
             randomComputerMove();
-            elegirPapel.classList.add("disable");
-            elegirTijera.classList.add("disable");
-            timer.classList.add("disable");
+            showComputerPlay();
+            playerPlayPapel.classList.add("disable");
+            playerPlayTijera.classList.add("disable");
             state.setMove(playerMove, computerMove);
             stateSubscriber(playerMove, computerMove);
-        })
+        });
+        playerPlayPapel.addEventListener("click", () => {
+            activeEventOn();
+            playerMove = "papel";
+            randomComputerMove();
+            showComputerPlay();
+            playerPlayPiedra.classList.add("disable");
+            playerPlayTijera.classList.add("disable");
+            state.setMove(playerMove, computerMove);
+            stateSubscriber(playerMove, computerMove);
+        });
+        playerPlayTijera.addEventListener("click", () => {
+            activeEventOn();
+            playerMove = "tijera";
+            randomComputerMove();
+            showComputerPlay();
+            playerPlayPiedra.classList.add("disable");
+            playerPlayPapel.classList.add("disable");
+            state.setMove(playerMove, computerMove);
+            stateSubscriber(playerMove, computerMove);
+        });
+        redirectToResult();
     })();
-
-
-    // const button = div.querySelector(".button-start");
-    // button.addEventListener("click", () => {
-    // params.goTo("/welcome");
-    // });
 
     (function timesUp() {
         const intervalId = setInterval(() => {
