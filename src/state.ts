@@ -8,7 +8,7 @@ const state = {
         currentGame: {
             myPlay: "",
             computerPlay: "",
-            result: ""
+            currentResult: "",
         },
         historyScore: {
             player: 0,
@@ -45,7 +45,7 @@ const state = {
             ...currentState,
             currentGame: {
                 ...currentState.currentGame,
-                result: result
+                currentResult: result
             }
         })
     },
@@ -72,7 +72,7 @@ const state = {
         
         if(gane) {
             this.pushToHistory(1, 0);
-            this.setResult(imgWin);
+            this.setResult("ganaste");
         }
         
         const perderConPiedra = myMove == "piedra" && computerMove == "papel";
@@ -82,14 +82,14 @@ const state = {
 
         if(perdi) {
             this.pushToHistory(0, 1);
-            this.setResult(imgLose);
+            this.setResult("perdiste");
         }
         
         const empate = myMove == computerMove;
 
         if(empate) {
             this.pushToHistory(0, 0);
-            this.setResult(imgTie);
+            this.setResult("empataste");
         }
     },
     restartScore() {

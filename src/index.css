@@ -1,3 +1,9 @@
+:root {
+  --background-win-style: rgb(108, 180, 108, 50%);
+  --background-tie-style: rgb(192, 192, 192, 50%);
+  --background-lose-style: rgb(220, 91, 73, 50%);
+}
+
 * {
   box-sizing: border-box;
 }
