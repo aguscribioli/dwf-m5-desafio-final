@@ -1,8 +1,8 @@
-import { initWelcomePage } from "./pages/welcome";
-import { initInstructionsPage } from "./pages/instructions";
-import { initPlayPage } from "./pages/play";
-import { initTimeIsUpPage } from "./pages/time-is-up";
-// import { initResult } from "./pages/result";
+import { initWelcomePage } from "./pages/welcome/welcome-page";
+import { initInstructionsPage } from "./pages/instructions/instructions-page";
+import { initPlayPage } from "./pages/play/play-page";
+import { initTimeIsUpPage } from "./pages/time-is-up/time-is-up-page";
+import { initResultPage } from "./pages/result/result-page";
 
 const routes = [
   {
@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: /\/result/,
-    // component: initResult,
+    component: initResultPage,
   },
 ];
 

@@ -1,18 +1,18 @@
-import "../../components/option-to-choose";
-import "../../components/timer";
+import "../../components/option-to-choose/option-to-choose";
+import "../../components/timer/timer";
 import { state, Jugada } from "../../state";
 
 export function initPlayPage(params) {
     const div = document.createElement("div");
     const style = document.createElement("style");
     div.className = "container-play-page";
-
+    
     let computerMove: Jugada;
     let playerMove: Jugada;
     let counter = 3;
     let activeEvent: any = false;
-
-
+    
+    
     div.innerHTML = `
         <div class="container-jugadas-computer">
             <my-jugada jugada="tijera" class="computer-play-tijera"></my-jugada>
@@ -28,7 +28,7 @@ export function initPlayPage(params) {
     `;
 
     style.innerHTML = `
-        .container-play-page {
+    .container-play-page {
             height: 100%;
             margin: auto;
             display: grid;
@@ -61,9 +61,9 @@ export function initPlayPage(params) {
         .enable {
             display: flex;
         }
-    `;
+        `;
 
-    function activeEventOn() {
+        function activeEventOn() {
         activeEvent = true;
     };
     
@@ -83,15 +83,15 @@ export function initPlayPage(params) {
 
     function redirectToResult(){
         let counter = 1;
-        setInterval(() => {
+        const redirecter = setInterval(() => {
             counter--;
             if (counter == 0) {
-                params.goTo("/welcome");
-                clearInterval();
+                params.goTo("/result");
+                clearInterval(redirecter);
             }
-        }, 3000)
+        }, 2000)
     };
-
+    
     const playerPlayPiedra = div.querySelector(".player-play-piedra");
     const playerPlayPapel = div.querySelector(".player-play-papel");
     const playerPlayTijera = div.querySelector(".player-play-tijera");
@@ -129,6 +129,7 @@ export function initPlayPage(params) {
             playerPlayTijera.classList.add("disable");
             state.setMove(playerMove, computerMove);
             stateSubscriber(playerMove, computerMove);
+            redirectToResult();
         });
         playerPlayPapel.addEventListener("click", () => {
             activeEventOn();
@@ -139,6 +140,7 @@ export function initPlayPage(params) {
             playerPlayTijera.classList.add("disable");
             state.setMove(playerMove, computerMove);
             stateSubscriber(playerMove, computerMove);
+            redirectToResult();
         });
         playerPlayTijera.addEventListener("click", () => {
             activeEventOn();
@@ -149,8 +151,8 @@ export function initPlayPage(params) {
             playerPlayPapel.classList.add("disable");
             state.setMove(playerMove, computerMove);
             stateSubscriber(playerMove, computerMove);
+            redirectToResult();
         });
-        redirectToResult();
     })();
 
     (function timesUp() {

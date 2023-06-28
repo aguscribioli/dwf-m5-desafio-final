@@ -1,5 +1,5 @@
-import "../../components/button"
-import "../../components/option-to-choose"
+import "../../components/button/button"
+import "../../components/option-to-choose/option-to-choose"
 
 export function initInstructionsPage(params) {
     const div = document.createElement("div");

@@ -1,4 +1,4 @@
-import "../../components/button"
+import "../../components/button/button"
 
 export function initTimeIsUpPage(params) {
     const div = document.createElement("div");

@@ -15,20 +15,12 @@ customElements.define(
       image.setAttribute("height", "200px");
       
       style.innerHTML = `
-      .piedra {
-        text-align: center;
-        cursor: pointer;
-      }
-      .papel {
-        text-align: center;
-        cursor: pointer;
-
-      }
-      .tijera {
+      .piedra, .papel, .tijera {
         text-align: center;
         cursor: pointer;
       }
       `
+      
       div.className = jugada;
       
       if (jugada == "piedra") {
