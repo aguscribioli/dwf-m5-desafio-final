@@ -32,6 +32,7 @@ export function initPlayPage(params) {
             height: 100%;
             margin: auto;
             display: grid;
+            text-align: center;
         }
         .container-timer {
             text-align: center;

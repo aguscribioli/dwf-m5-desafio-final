@@ -47,7 +47,8 @@ export function initInstructionsPage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
-            padding-top: 30px;
+            padding-top: 50px;
+            gap: 20px;
         }
     `;
 
