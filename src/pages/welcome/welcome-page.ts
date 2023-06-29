@@ -29,7 +29,7 @@ export function initWelcomePage(params) {
             font-size: 70px;
             width: 300px;
             text-align: center;
-            margin: auto;
+            margin: 20px auto;
         }
         @media (min-width: 960px) {
             .title {
@@ -39,7 +39,7 @@ export function initWelcomePage(params) {
         }
         .button {
             text-align: center;
-            padding-top: 50px;
+            padding-top: 25px;
         }
         @media (min-width: 960px) {
             .button {
@@ -51,7 +51,7 @@ export function initWelcomePage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
-            padding-top: 20px;
+            padding-top: 40px;
         }
     `;
 

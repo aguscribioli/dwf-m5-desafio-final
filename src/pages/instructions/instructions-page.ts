@@ -29,10 +29,10 @@ export function initInstructionsPage(params) {
         .text-instructions {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
-            font-size: 40px;
+            font-size: 30px;
             max-width: 400px;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
         }
         .button {
             text-align: center;

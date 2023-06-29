@@ -42,6 +42,8 @@ export function initPlayPage(params) {
             max-width: 600px;
             margin: auto;
             display: flex;
+            gap: 20px;
+            padding-top: 30px;
             justify-content: space-evenly;
             align-items: end;
         }

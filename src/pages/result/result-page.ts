@@ -46,7 +46,7 @@ export function initResultPage(params) {
             display: grid;
         }
         .container-sign-result {
-            padding-top: 30px;
+            padding-top: 30px 0;
             display: flex;
             justify-content: center;
             align-items: center;

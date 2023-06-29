@@ -21,11 +21,12 @@ export function initTimeIsUpPage(params) {
             height: 100%;
             margin: auto;
             display: grid;
+            text-align: center;
         }
         .text-instructions {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
-            font-size: 40px;
+            font-size: 30px;
             width: 300px;
             text-align: center;
             margin: auto;
