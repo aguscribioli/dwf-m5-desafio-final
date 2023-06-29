@@ -1,6 +1,7 @@
 {
   "name": "desafio-final",
   "version": "1.0.0",
+  "source": "src/index.html",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^5.0.0"
