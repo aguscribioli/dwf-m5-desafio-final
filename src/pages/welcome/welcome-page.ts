@@ -43,7 +43,7 @@ export function initWelcomePage(params) {
         }
         @media (min-width: 960px) {
             .button {
-                padding-top: 25px;
+                padding: 25px 0;
             }
         }
         .container-jugadas {
@@ -51,7 +51,8 @@ export function initWelcomePage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
-            padding-top: 40px;
+            padding-top: 30px;
+            gap: 20px;
         }
     `;
 

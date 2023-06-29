@@ -39,7 +39,7 @@ export function initInstructionsPage(params) {
         }
         @media (min-width: 960px) {
             .button {
-                padding-top: 25px;
+                padding: 25px 0;
             }
         }
         .container-jugadas {
