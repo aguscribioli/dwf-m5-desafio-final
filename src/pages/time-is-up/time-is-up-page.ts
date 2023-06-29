@@ -18,7 +18,7 @@ export function initTimeIsUpPage(params) {
 
     style.innerHTML = `
         .container-instructions-page {
-            height: 100vh;
+            height: 100%;
             margin: auto;
             display: grid;
         }

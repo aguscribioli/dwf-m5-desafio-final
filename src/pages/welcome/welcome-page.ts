@@ -20,13 +20,13 @@ export function initWelcomePage(params) {
 
     style.innerHTML = `
         .container-welcome-page {
-            height: 100vh;
+            height: 100%;
             margin: auto;
             display: grid;
         }
         .title {
             color: rgba(0, 144, 72, 1);
-            font-size: 100px;
+            font-size: 70px;
             width: 300px;
             text-align: center;
             margin: auto;

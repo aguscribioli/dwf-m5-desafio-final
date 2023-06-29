@@ -22,7 +22,7 @@ export function initInstructionsPage(params) {
 
     style.innerHTML = `
         .container-instructions-page {
-            height: 100vh;
+            height: 100%;
             margin: auto;
             display: grid;
         }
@@ -30,16 +30,10 @@ export function initInstructionsPage(params) {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
             font-size: 40px;
-            width: 400px;
+            max-width: 400px;
             text-align: center;
             margin: auto;
             padding-top: 40px;
-        }
-        @media (min-width: 960px) {
-            .title {
-                font-size: 130px;
-                width: 550px;
-            }
         }
         .button {
             text-align: center;

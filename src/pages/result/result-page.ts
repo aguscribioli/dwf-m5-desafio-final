@@ -41,7 +41,7 @@ export function initResultPage(params) {
     
     style.innerHTML = `
     .container-result-page {
-            height: 100vh;
+            height: 100%;
             margin: auto;
             display: grid;
         }
