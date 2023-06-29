@@ -35,12 +35,12 @@ export function initPlayPage(params) {
         }
         .container-timer {
             text-align: center;
-            height: 50%;
+            height: 100%;
         }
         .container-jugadas-player, .container-jugadas-computer {
-            height: 50%;
+            height: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin: auto;
             display: flex;
             justify-content: space-evenly;
             align-items: end;

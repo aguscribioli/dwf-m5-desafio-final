@@ -51,6 +51,7 @@ export function initWelcomePage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
+            padding-top: 20px;
         }
     `;
 

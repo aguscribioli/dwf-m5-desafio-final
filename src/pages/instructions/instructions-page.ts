@@ -32,12 +32,10 @@ export function initInstructionsPage(params) {
             font-size: 40px;
             max-width: 400px;
             text-align: center;
-            margin: auto;
-            padding-top: 40px;
+            padding: 30px;
         }
         .button {
             text-align: center;
-            padding-top: 60px;
         }
         @media (min-width: 960px) {
             .button {
@@ -49,6 +47,7 @@ export function initInstructionsPage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
+            padding-top: 30px;
         }
     `;
 
