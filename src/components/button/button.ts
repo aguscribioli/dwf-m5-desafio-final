@@ -22,6 +22,8 @@ customElements.define(
                     padding: 15px;
                     text-align: center;
                     cursor: pointer;
+                    width: 100%;
+                    max-width: 285px;
                 }
             `
             button.textContent = this.textContent;
