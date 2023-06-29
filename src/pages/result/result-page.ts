@@ -1,6 +1,5 @@
 import { state } from "../../state";
 import "../../components/sign-result/sign-result";
-import "../../components/score/score";
 
 export function initResultPage(params) {
     const div = document.createElement("div");
