@@ -30,15 +30,17 @@ export function initInstructionsPage(params) {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
             font-size: 40px;
-            width: 400px;
+            width: auto;
+            max-width: 500px;
             text-align: center;
             margin: auto;
-            padding-top: 40px;
+            padding: 40px 20px;
         }
         @media (min-width: 960px) {
-            .title {
-                font-size: 130px;
-                width: 550px;
+            .text-instructions {
+                font-size: 55px;
+                max-width: 700px;
+                padding: 40px 0;
             }
         }
         .button {
@@ -47,7 +49,8 @@ export function initInstructionsPage(params) {
         }
         @media (min-width: 960px) {
             .button {
-                padding-top: 25px;
+                padding-top: 0;
+                padding-bottom: 40px;
             }
         }
         .container-jugadas {
@@ -55,6 +58,7 @@ export function initInstructionsPage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
+            gap: 20px;
         }
     `;
 

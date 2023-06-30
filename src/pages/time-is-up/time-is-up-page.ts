@@ -33,7 +33,7 @@ export function initTimeIsUpPage(params) {
         }
         @media (min-width: 960px) {
             .text-instructions {
-                font-size: 80px;
+                font-size: 55px;
                 width: 800px;
             }
         }

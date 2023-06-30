@@ -42,7 +42,7 @@ export function initPlayPage(params) {
             max-width: 600px;
             margin: 0 auto;
             display: flex;
-            gap: 40px;
+            gap: 20px;
             justify-content: space-evenly;
             align-items: end;
         }

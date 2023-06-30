@@ -22,10 +22,16 @@ customElements.define(
       
       if (result == "win") {
         image.src = require("url:../../images/result-won.png");
+        image.style.height = "230px";
+        image.style.width = "230px";
       } else if (result == "lose") {
         image.src = require("url:../../images/result-lost.png");
+        image.style.height = "230px";
+        image.style.width = "230px";
       } else if (result == "tie") {
         image.src = require("url:../../images/result-tie.png");
+        image.style.height = "230px";
+        image.style.width = "230px";
       }
 
       div.appendChild(image);
