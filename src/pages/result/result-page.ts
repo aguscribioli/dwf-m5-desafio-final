@@ -28,28 +28,34 @@ export function initResultPage(params) {
             <p class="title-score">Score</p>
                 <div class="container-history-score">
                     <p><u>Vos</u>: ${playerScore}</p>
-                    <br>
                     <p><u>Computadora</u>: ${computerScore}</p>
                 </div>
             </div>
             <div class="container-button">
                 <my-button class="play-again-button enable">Volver a jugar</my-button>
-                <my-button class="reset-score enable">Reiniciar historial</my-button>
+                <my-button class="reset-score enable">Reiniciar juego</my-button>
             </div>
         </div>
     `;
     
     style.innerHTML = `
-    .container-result-page {
+        .container-result-page {
             height: 100%;
             margin: auto;
             display: grid;
         }
+        @media (min-width: 960px) {
+            .container-result-page {
+                height: 100vh;
+            }
+        }
         .container-sign-result {
-            padding-top: 30px 0;
+            padding: 30px 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100%;
+            width: 100%;
         }
         .container-score-and-button {
             display: flex;
@@ -82,11 +88,13 @@ export function initResultPage(params) {
             font-size: 40px;
             text-align: right;
             padding: 10px 20px 20px 20px;
+            display: grid;
+            gap: 20px;
         }
         .container-button {
             display: flex;
             flex-direction: column;
-            gap: 45px;
+            gap: 30px;
             padding: 30px 0;
             
         }

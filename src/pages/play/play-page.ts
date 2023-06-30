@@ -29,22 +29,20 @@ export function initPlayPage(params) {
 
     style.innerHTML = `
     .container-play-page {
-            height: 100%;
+            height: 100vh;
             margin: auto;
             display: grid;
-            text-align: center;
         }
         .container-timer {
             text-align: center;
-            height: 100%;
+            height: 50vh;
         }
         .container-jugadas-player, .container-jugadas-computer {
-            height: 100%;
+            height: 50vh;
             max-width: 600px;
-            margin: auto;
+            margin: 0 auto;
             display: flex;
             gap: 20px;
-            padding-top: 30px;
             justify-content: space-evenly;
             align-items: end;
         }

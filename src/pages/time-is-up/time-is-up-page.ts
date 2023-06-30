@@ -18,15 +18,14 @@ export function initTimeIsUpPage(params) {
 
     style.innerHTML = `
         .container-instructions-page {
-            height: 100%;
+            height: 100vh;
             margin: auto;
             display: grid;
-            text-align: center;
         }
         .text-instructions {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
-            font-size: 30px;
+            font-size: 40px;
             width: 300px;
             text-align: center;
             margin: auto;
@@ -34,7 +33,7 @@ export function initTimeIsUpPage(params) {
         }
         @media (min-width: 960px) {
             .text-instructions {
-                font-size: 80px;
+                font-size: 55px;
                 width: 800px;
             }
         }

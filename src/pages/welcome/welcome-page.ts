@@ -20,16 +20,16 @@ export function initWelcomePage(params) {
 
     style.innerHTML = `
         .container-welcome-page {
-            height: 100%;
+            height: 100vh;
             margin: auto;
             display: grid;
         }
         .title {
             color: rgba(0, 144, 72, 1);
-            font-size: 70px;
+            font-size: 100px;
             width: 300px;
             text-align: center;
-            margin: 20px auto;
+            margin: auto;
         }
         @media (min-width: 960px) {
             .title {
@@ -39,7 +39,7 @@ export function initWelcomePage(params) {
         }
         .button {
             text-align: center;
-            padding-top: 25px;
+            padding-top: 50px;
         }
         @media (min-width: 960px) {
             .button {
@@ -51,7 +51,6 @@ export function initWelcomePage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
-            padding-top: 30px;
             gap: 20px;
         }
     `;

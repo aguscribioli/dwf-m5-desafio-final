@@ -22,24 +22,35 @@ export function initInstructionsPage(params) {
 
     style.innerHTML = `
         .container-instructions-page {
-            height: 100%;
+            height: 100vh;
             margin: auto;
             display: grid;
         }
         .text-instructions {
             font-family: American Typewriter;
             color: rgba(0, 0, 0, 1);
-            font-size: 30px;
-            max-width: 400px;
+            font-size: 40px;
+            width: auto;
+            max-width: 500px;
             text-align: center;
-            padding: 20px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        @media (min-width: 960px) {
+            .text-instructions {
+                font-size: 55px;
+                max-width: 700px;
+                padding: 40px 0;
+            }
         }
         .button {
             text-align: center;
+            padding-top: 60px;
         }
         @media (min-width: 960px) {
             .button {
-                padding: 25px 0;
+                padding-top: 0;
+                padding-bottom: 40px;
             }
         }
         .container-jugadas {
@@ -47,7 +58,6 @@ export function initInstructionsPage(params) {
             grid-template-columns: 100px 100px 100px;
             justify-content: center;
             align-content: end;
-            padding-top: 50px;
             gap: 20px;
         }
     `;
