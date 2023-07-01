@@ -45,7 +45,6 @@ export function initInstructionsPage(params) {
         }
         .button {
             text-align: center;
-            padding-top: 60px;
         }
         @media (min-width: 960px) {
             .button {

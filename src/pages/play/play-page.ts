@@ -29,7 +29,7 @@ export function initPlayPage(params) {
 
     style.innerHTML = `
     .container-play-page {
-            height: 100vh;
+            height: 100%;
             margin: auto;
             display: grid;
         }
